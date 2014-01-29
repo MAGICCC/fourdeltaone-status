@@ -1,0 +1,9 @@
+[submodule "external/Fleck"]
+	path = external/Fleck
+	url = git@github.com:statianzo/Fleck.git
+[submodule "external/json.net"]
+	path = external/json.net
+	url = git@github.com:JamesNK/Newtonsoft.Json.git
+[submodule "external/log4net"]
+	path = external/log4net
+	url = git@github.com:apache/log4net.git
