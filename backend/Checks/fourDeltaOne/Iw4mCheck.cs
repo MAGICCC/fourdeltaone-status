@@ -40,16 +40,6 @@ namespace fdocheck.Checks
             // 4D1
             AddMasterServer("4D1", "iw4.prod.fourdeltaone.net");
 
-<<<<<<< HEAD
-			
-=======
-            // Legacy
-#if LEGACY
-           // AddMasterServer("aRev", "master.alterrev.net", 20810, true);
-           // AddMasterServer("iw4p", "server.iw4play.de", 20810, true);
-#endif
-
->>>>>>> 9b2b9de505674f39613f22b9f218ea391d6a7b00
             Authentication = authentication;
         }
 

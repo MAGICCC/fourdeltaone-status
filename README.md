@@ -1,10 +1,27 @@
 fourDeltaOne Status Project
 ===
 
-Continuation of MAGIC's 4D1 status website.
+The most recent version of the original code of the fourDeltaOne status website.
 
+Development on this code by Icedream has been dropped in March and the ownership has
+been given over to MAGIC. The code is pretty much useless as of the cancelling
+of fourDeltaOne due to its C&D. It should be only used as a reference or as an opportunity
+for bug fixing and maybe reviving the code.
 
-What does this repository include
+_Don't rely on it as in expecting it to be bug-free. It is not._
+
+Will I get support for this code?
+---
+
+I expect from you as the code user to know what you're doing. Don't contact me if you don't
+know how to properly set up a virtual host on Apache or compile C# stuff or similar, that will
+just tell me that you're not okay to maintain this project properly. Instead look it up on
+Google and _educate yourself_. Only if that fails, and only then, you can give it a try on IRC.
+But no guarantees.
+
+tl;dr: _No_.
+
+What does this repository include?
 ---
 
 Right at the moment, this repository includes the source code from the following
