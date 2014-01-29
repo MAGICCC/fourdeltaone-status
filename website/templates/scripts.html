@@ -1,0 +1,34 @@
+<!-- Settings -->
+<?php
+// Defaults
+$_SETTINGS = Array(
+  "backend" => Array(
+    "port" => 29001,
+    "host" => $_SERVER["SERVER_NAME"],
+    "path" => "/",
+    "secure" => false
+  )
+);
+
+// Customized
+if(file_exists("settings.json"))
+{
+  $settingsNew = json_decode(file_get_contents("settings.json"), true);
+  $_SETTINGS = array_merge($_SETTINGS, $settingsNew);
+}
+?>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js" type="text/javascript"></script>
+<script src="//raw.github.com/joewalnes/reconnecting-websocket/master/reconnecting-websocket.min.js" type="text/javascript"></script>
+<script src="./js/jquery.tablesorter.min.js" type="text/javascript"></script>
+<script src="./js/jquery.metadata.js" type="text/javascript"></script>
+<script src="./js/jquery.color.js" type="text/javascript"></script>
+<script src="./js/jquery.color.svg-names.js" type="text/javascript"></script>
+<script src="./js/isodate.js" type="text/javascript"></script>
+<script src="./js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var settings = $.parseJSON("<?=str_replace(Array('\\', '"'), Array('\\\\', '\\"'), json_encode($_SETTINGS)); ?>");
+</script>
+<script src="./js/4d1.js?<?=rand() ?>" type="text/javascript"></script>
+<script src="./js/4d1.request.js?<?=rand() ?>" type="text/javascript"></script>

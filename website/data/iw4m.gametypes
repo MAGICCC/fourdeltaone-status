@@ -1,0 +1,26 @@
+<?php
+/*GT_LIST
+conf - Kill Confirmed
+grnd - Drop Zone
+gun - Gun Game
+gg - Gun Game
+infect - Infected
+jugg - Juggernaut
+oic - One In The Chamber
+GT_LIST*/
+
+$parseit = false;
+
+foreach(file(__FILE__) as $line)
+{
+	$line = trim($line);
+	if($line == "/*GT_LIST")
+		$parseit = true;
+	else if($line == "GT_LIST*/")
+		$parseit = false;
+	else if($parseit)
+	{
+		$line = explode(" - ", $line);
+		$_GAMETYPES["iw4m"][$line[0]] = $line[1];
+	}
+}

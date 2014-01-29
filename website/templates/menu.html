@@ -1,0 +1,16 @@
+<ul class="menu">
+<?php
+foreach($links as $page) {
+	if($_PAGE["id"] == $page["id"])
+		$page["attributes"]["class"] = "active";
+	$page["attributes"]["href"] = $page["url"];
+	$page["attributes"]["alt"] = $page["title"];
+	$page["attributes"]["title"] = $page["title"];
+?>
+<li>
+<a<?=parse_attributes($page["attributes"]) ?>>
+<?=htmlentities($page["title"]) ?>
+</a>
+</li>
+<? } ?>
+</ul>

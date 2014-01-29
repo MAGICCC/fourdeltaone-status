@@ -1,0 +1,50 @@
+<?php
+/*MP_LIST
+mp_example - Example - http://example.com/image.jpg
+Afghan - Afghan - /maps/iw4m/Afghan.jpg
+Bailout - Bailout - http://images2.wikia.nocookie.net/__cb20100613115814/callofduty/images/thumb/0/0e/MW2_Bailout.jpg/320px-MW2_Bailout.jpg
+Carnival - Carnival - http://images4.wikia.nocookie.net/__cb20100712195431/callofduty/images/thumb/c/c3/Carnival_loadscreen.jpg/320px-Carnival_loadscreen.jpg
+Crash - Crash - http://images4.wikia.nocookie.net/__cb20100613115707/callofduty/images/thumb/9/9f/Bare_Load_Screen_Crash_MW2.jpg/320px-Bare_Load_Screen_Crash_MW2.jpg
+Derail - Derail - /maps/iw4m/Derail.jpg
+Estate - Estate - /maps/iw4m/Estate.jpg
+Favela - Favela - /maps/iw4m/Favela.jpg
+Fuel - Fuel - http://images4.wikia.nocookie.net/__cb20100712195523/callofduty/images/thumb/d/de/Fuel_loadscreen.jpg/320px-Fuel_loadscreen.jpg
+Fuel2 - Fuel - http://images4.wikia.nocookie.net/__cb20100712195523/callofduty/images/thumb/d/de/Fuel_loadscreen.jpg/320px-Fuel_loadscreen.jpg
+Highrise - Highrise - /maps/iw4m/Highrise.jpg
+Invasion - Invasion - /maps/iw4m/Invasion.jpg
+Karachi - Karachi - /maps/iw4m/Karachi.jpg
+Oilrig - Oilrig - https://encrypted-tbn3.google.com/images?q=tbn:ANd9GcRjjJSeG0ytTYXLHzuvfWk0LZw9NswVG1tJOPJF4A8B7mImNd3J
+Overgrown - Overgrown - http://images1.wikia.nocookie.net/__cb20110727174106/callofduty/images/thumb/7/7d/Bare_Load_Screen_Overgrown_CoD4.jpg/320px-Bare_Load_Screen_Overgrown_CoD4.jpg
+Quarry - Quarry - /maps/iw4m/Quarry.jpg
+Rundown - Rundown - /maps/iw4m/Rundown.jpg
+Rust - Rust - /maps/iw4m/Rust.jpg
+Salvage - Salvage - http://images2.wikia.nocookie.net/__cb20100613115826/callofduty/images/thumb/d/d7/MW2_Salvage.jpg/320px-MW2_Salvage.jpg
+boneyard - Scrapyard - /maps/iw4m/Scrapyard.jpg
+Scrapyard - Scrapyard - /maps/iw4m/Scrapyard.jpg
+Skidrow - Skidrow - /maps/iw4m/Skidrow.jpg
+Storm - Storm - https://encrypted-tbn1.google.com/images?q=tbn:ANd9GcRL6mrvBhageO4SX3wzZYU_EOX8VmnMdbNVAOfLtiHK3L2GmOvmdw
+Strike - Strike - http://images1.wikia.nocookie.net/__cb20110727175656/callofduty/images/thumb/f/fe/Cod4_map_strike.jpg/320px-Cod4_map_strike.jpg
+Sub Base - Sub Base - /maps/iw4m/Sub%20Base.jpg
+Terminal - Terminal - /maps/iw4m/Terminal.jpg
+Trailer Park - Trailer Park - http://images2.wikia.nocookie.net/__cb20100712195450/callofduty/images/thumb/c/cf/Trailer_Park.jpg/320px-Trailer_Park.jpg
+Underpass - Underpass - /maps/iw4m/Underpass.jpg
+Vacant - Vacant - http://www.attum360pro.ewebsite.com/img/mid/27/mw2---vacant---map.jpg
+Wasteland - Wasteland - /maps/iw4m/Wasteland.jpg
+MP_LIST*/
+
+$parseit = false;
+
+foreach(file(__FILE__) as $line)
+{
+	$line = trim($line);
+	if($line == "/*MP_LIST")
+		$parseit = true;
+	else if($line == "MP_LIST*/")
+		$parseit = false;
+	else if($parseit)
+	{
+		$line = explode(" - ", $line);
+		$_MAPS["mw2"][$line[0]] = $line[1];
+		$_MAPS["thumbs"][$line[0]] = $line[2];
+	}
+}

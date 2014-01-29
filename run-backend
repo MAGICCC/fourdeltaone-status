@@ -1,0 +1,4 @@
+#!/bin/sh
+cd backend/bin/Debug/
+mono fdocheck.exe
+cd ../../..
