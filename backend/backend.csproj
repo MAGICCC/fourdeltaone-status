@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>fdocheck</RootNamespace>
     <AssemblyName>fdocheck</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -33,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -77,11 +79,11 @@
       <Name>Fleck</Name>
     </ProjectReference>
     <ProjectReference Include="..\external\json.net\Src\Newtonsoft.Json\Newtonsoft.Json.csproj">
-      <Project>{A9AE40FF-1A21-414A-9FE7-3BE13644CC6D}</Project>
+      <Project>{eeea67f9-9089-481d-a4dc-0966dec9fd7d}</Project>
       <Name>Newtonsoft.Json</Name>
     </ProjectReference>
-    <ProjectReference Include="..\external\log4net\src\log4net.vs2010.csproj">
-      <Project>{181FE707-E161-4722-9F38-6AAAB6FAA106}</Project>
+    <ProjectReference Include="..\external\log4net\src\log4net\log4net.vs2010.csproj">
+      <Project>{181fe707-e161-4722-9f38-6aaab6faa106}</Project>
       <Name>log4net.vs2010</Name>
     </ProjectReference>
   </ItemGroup>
